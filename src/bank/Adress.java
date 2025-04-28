@@ -1,4 +1,4 @@
-package compteBancaire;
+package bank;
 
 public class Adress {
 
@@ -19,6 +19,7 @@ public class Adress {
     }
 
     public void afficherAdress() {
+        System.out.println("ADRESSE");
         System.out.println("Numero: " + this.numero);
         System.out.println("Rue: " + this.rue);
         System.out.println("Code postal: " + this.codePostal);

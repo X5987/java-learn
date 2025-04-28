@@ -1,12 +1,32 @@
-package compteBancaire;
+package bank;
 
 public class CompteCourant extends Compte {
     protected double solde;
     protected double montant;
 
-    public CompteCourant(double montant, Long userId, String numeroCompte, String numeroCarte, String numeroChequier, Long idAgence) {
-        super(userId, numeroCompte, numeroCarte, numeroChequier, idAgence);
+    public CompteCourant(String numeroCompte, String numeroCarte, Long idAgence) {
+        this(numeroCompte, numeroCarte, idAgence, 4000, 50);
+    }
+
+    public CompteCourant(String numeroCompte, String numeroCarte, Long idAgence, double solde, double montant) {
+        super(numeroCompte, numeroCarte, idAgence);
+        this.solde = solde;
         this.montant = montant;
+    }
+
+    @Override
+    public String toString() {
+        return "CompteCourant{" +
+                "solde=" + solde +
+                ", montant=" + montant +
+                "} " + super.toString();
+    }
+
+
+    @Override
+    public void afficherCompte() {
+        super.afficherCompte();
+        System.out.println("va te faire foutre");
     }
 
     /**
