@@ -46,10 +46,13 @@ public class Burger {
     }
 
     public double getPrice() {
-        if (topping != null) {
-            for (Topping t : topping) {
-                price += t.getPrice();
-            }
+        return price;
+    }
+
+    public double getToppingsPrice() {
+        double price = 0;
+        for (Topping t : topping) {
+            price += t.getPrice();
         }
         return price;
     }
